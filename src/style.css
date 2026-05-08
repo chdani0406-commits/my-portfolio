@@ -1,0 +1,66 @@
+/* CSS 변수 - 컬러 팔레트 디자인 시스템 */
+:root {
+  /* Primary Colors */
+  --color-primary: #6B7C5C;
+  --color-primary-light: #8A9E78;
+  --color-primary-dark: #4A6741;
+
+  /* Secondary Colors */
+  --color-secondary: #C8A882;
+  --color-accent: #4A6741;
+
+  /* Background Colors */
+  --color-bg-primary: #F5F0E8;
+  --color-bg-secondary: #EDE8DE;
+  --color-bg-card: #FFFFFF;
+
+  /* Text Colors */
+  --color-text-primary: #2C2C2C;
+  --color-text-secondary: #6B6B6B;
+  --color-text-muted: #A0A0A0;
+
+  /* Border & Outline */
+  --color-border: #D8D0C4;
+  --color-border-light: #EDE8DE;
+
+  /* Interactive Colors */
+  --color-button-primary: #6B7C5C;
+  --color-button-hover: #4A6741;
+  --color-link: #6B7C5C;
+  --color-link-hover: #4A6741;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-primary: #1E1E1A;
+    --color-bg-secondary: #2A2A26;
+    --color-bg-card: #2E2E2A;
+    --color-text-primary: #F0EBE0;
+    --color-text-secondary: #B0A898;
+    --color-text-muted: #706A60;
+    --color-border: #3A3A36;
+    --color-primary: #8A9E78;
+    --color-primary-dark: #6B7C5C;
+  }
+}
+
+/* CSS 초기화 */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
