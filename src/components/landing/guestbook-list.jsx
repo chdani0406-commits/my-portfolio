@@ -21,6 +21,10 @@ function GuestbookList({ refreshKey = 0 }) {
   useEffect(() => {
     const fetchEntries = async () => {
       setLoading(true);
+      if (!supabase) {
+        setLoading(false);
+        return;
+      }
       const { data, error } = await supabase
         .from('portfolio_guestbook_public')
         .select('*')

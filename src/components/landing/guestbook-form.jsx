@@ -67,6 +67,12 @@ function GuestbookForm({ onSubmitSuccess }) {
       ...(form.rating > 0 && { rating: form.rating }),
     };
 
+    if (!supabase) {
+      setLoading(false);
+      setError('데이터베이스 연결이 설정되지 않았습니다.');
+      return;
+    }
+
     const { error: supabaseError } = await supabase
       .from('portfolio_guestbook')
       .insert([payload]);
